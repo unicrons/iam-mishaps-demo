@@ -1,5 +1,7 @@
 # IAM Mishaps Demo
 
+Originally created for [Sh3llcon 2024 talk](https://sh3llcon.es/programa/):
+
 # Cases
 
 ## Resources
@@ -11,7 +13,7 @@ To check the resources that are goint to be created for each case check the `USA
 - An AWS Account: to deploy demo resources you will need an AWS account
   > All resources are included in the free tier if you don't abouse the requests
 
-- Each case stores the tfstate in a S3 bucket to allow, to create that tfstates bucket deploy it using: 
+- Each case stores the tfstate in a S3 bucket to allow, to create that tfstates bucket deploy it using:
   ```bash
   cd bootstrap/
   make plan
