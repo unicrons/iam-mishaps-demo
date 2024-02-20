@@ -1,6 +1,7 @@
 # IAM Mishaps Demo
 
 Originally created for [Sh3llcon 2024 talk](https://sh3llcon.es/programa/):
+![](./assets/sh3llcon_talk.png)
 
 # Cases
 
