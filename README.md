@@ -28,3 +28,8 @@ To check the resources that are goint to be created for each case check the `USA
 - [Case 2 - SNS](./case2_sns/README.md)
 
 - [Case 3 - Chatbot](./case3_chatbot/README.md)
+
+## Blog IAM Series
+- [IAM policy mishaps: Intro to IAM](https://unicrons.cloud/en/2024/02/20/iam-policy-mishaps-intro-to-iam/)
+- [IAM policy mishaps: Case 1 - S3](https://unicrons.cloud/en/2024/06/01/iam-policy-mishaps-case-1---s3/)
+- More soon...
