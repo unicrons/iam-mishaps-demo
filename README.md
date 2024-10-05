@@ -1,10 +1,10 @@
 # IAM Mishaps Demo
 > We're all familiar with the principle of least privilege, but... how easy is it to apply in the cloud? We'll walk you through several AWS IAM case studies, demonstrating just how complex achieving it can be and what the consequences might be.
 
-Originally created for [Sh3llcon 2024 talk](https://sh3llcon.es/programa/):
+Originally created for [Sh3llcon 2024 talk](https://sh3llcon.es/programa/). [[Slides]](./Sh3llcon_IAM_policy_mishaps_slides.pdf)
 <br><img src="./assets/sh3llcon_talk.png" width="500">
 
-Updated for [AWS UG VLC Meetup](https://www.meetup.com/aws-valencia/events/303501987) with a new case.
+Updated for [AWS UG VLC Meetup](https://www.meetup.com/aws-valencia/events/303501987) with a new case. [[Slides]](./AWSUGVLC_IAM_policy_mishaps_slides.pdf)
 
 
 
