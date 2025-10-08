@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "tfstates" {
-  bucket        = "sh3llcon-tfstates"
+  bucket        = "unicrons-mishaps-demo-tfstates"
   force_destroy = "false"
 
   tags = {
