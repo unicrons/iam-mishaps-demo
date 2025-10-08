@@ -8,11 +8,10 @@ from botocore.exceptions import ClientError
 
 
 logger = logging.getLogger(__name__)
-level = logging.getLevelName("INFO")
-logger.setLevel(level)
+LOGLEVEL = os.environ.get("LOGLEVEL", "INFO")
+logger.setLevel(LOGLEVEL.upper())
 
-
-concepts = ["Barcos y extras", "Comisario V", "Señor Pato", "Piñas"]
+concepts = ["Travel expenses", "Management fees", "Taxes"]
 
 SNS = boto3.client("sns")
 SNS_ARN = os.environ.get("SNS_ARN")
@@ -29,7 +28,7 @@ def random_concept():
 def publish_message(event, lambda_context):
     amount = random_amount()
     concept = random_concept()
-    message = f"Se ha expedido una factura por valor de {amount}. Concepto: {concept}"
+    message = f"An invoice has been issued for {amount}. Concept: {concept}"
 
     try:
         SNS.publish(
@@ -38,11 +37,7 @@ def publish_message(event, lambda_context):
             MessageStructure="json",
         )
 
-        logger.info(
-            "Published message %s to topic %s.",
-            message,
-            SNS_ARN,
-        )
+        logger.info("Published message '%s' to topic '%s'.", message, SNS_ARN)
     except ClientError:
-        logger.exception("Couldn't publish message to topic %s.", SNS_ARN)
+        logger.exception("Couldn't publish message to topic '%s'.", SNS_ARN)
         raise

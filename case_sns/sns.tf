@@ -1,5 +1,5 @@
 resource "aws_sns_topic" "invoices_notify" {
-  name              = "sh3llcon-invoices"
+  name              = "unicrons-invoices"
   kms_master_key_id = "alias/aws/sns"
 }
 
