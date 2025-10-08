@@ -1,7 +1,7 @@
 TERRAFORM_BIN = $(shell which terraform)
 TFVARS_FILE = ./config/terraform.tfvars
-TERRAFORM_BUCKET = sh3llcon-tfstates
-TFSTATE_FILE = infra/case1.tfstate
+TERRAFORM_BUCKET = unicrons-mishaps-demo-tfstates
+TFSTATE_FILE = infra/case_s3.tfstate
 
 init:
 	$(TERRAFORM_BIN) init -backend=false

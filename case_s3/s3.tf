@@ -43,6 +43,8 @@ resource "aws_s3_object" "object" {
 }
 
 resource "aws_s3_bucket_policy" "this" {
+  depends_on = [ aws_s3_bucket_public_access_block.this ]
+
   bucket = aws_s3_bucket.this.id
   policy = data.aws_iam_policy_document.bad_policy.json # Comment this line to secure the bucket
   # policy = data.aws_iam_policy_document.good_policy.json # Uncomment this line to secure the bucket
@@ -50,7 +52,7 @@ resource "aws_s3_bucket_policy" "this" {
 
 data "aws_iam_policy_document" "bad_policy" {
   statement {
-    sid    = "Sh3llconPolicy"
+    sid    = "BadPolicy"
     effect = "Allow"
 
     principals {
@@ -81,7 +83,7 @@ data "aws_iam_policy_document" "bad_policy" {
 
 data "aws_iam_policy_document" "good_policy" {
   statement {
-    sid    = "Sh3llconPolicy"
+    sid    = "GoodPolicy"
     effect = "Allow"
 
     principals {

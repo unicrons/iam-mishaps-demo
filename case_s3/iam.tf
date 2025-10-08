@@ -2,8 +2,8 @@ data "aws_iam_policy_document" "assume_role" {
   statement {
     actions = ["sts:AssumeRole"]
     principals {
-      type        = "Service"
-      identifiers = ["ec2.amazonaws.com"]
+      type        = "AWS"
+      identifiers = [data.aws_caller_identity.current.account_id]
     }
   }
 }
@@ -22,7 +22,7 @@ resource "aws_iam_role_policy_attachment" "role_a" {
 
 resource "aws_iam_policy" "role_a" {
   name   = "role-a"
-  policy = data.aws_iam_policy_document.shellcon_role_policy.json
+  policy = data.aws_iam_policy_document.role_policy.json
 }
 
 # Role B
@@ -39,12 +39,12 @@ resource "aws_iam_role_policy_attachment" "role_b" {
 
 resource "aws_iam_policy" "role_b" {
   name   = "role-b"
-  policy = data.aws_iam_policy_document.shellcon_role_policy.json
+  policy = data.aws_iam_policy_document.role_policy.json
 }
 
 # Role Policy
 
-data "aws_iam_policy_document" "shellcon_role_policy" {
+data "aws_iam_policy_document" "role_policy" {
   statement {
     sid    = "S3"
     effect = "Allow"
