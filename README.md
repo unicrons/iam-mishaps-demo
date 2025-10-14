@@ -6,6 +6,7 @@ Originally created for [Sh3llcon 2024 talk](https://sh3llcon.es/programa/). [[Sl
 
 Updated for [AWS UG VLC Meetup](https://www.meetup.com/aws-valencia/events/303501987) with a new case. [[Slides]](./AWSUGVLC_IAM_policy_mishaps_slides.pdf)
 
+Updated for [AWS Community Day CEE 2025](https://awscommunity.eu/). [[Slides]](#TODO)
 
 
 # Cases
@@ -28,13 +29,14 @@ To check the resources that are goint to be created for each case check the `USA
 
 ## Deploy it
 
-- [Case 1 - S3](./case1_s3/README.md)
+- [Case S3](./case_s3/README.md)
 
-- [Case 2 - SNS](./case2_sns/README.md)
+- [Case SNS](./case_sns/README.md)
 
-- [Case 3 - Chatbot](./case3_chatbot/README.md)
+- [Case Chatbot](./case_chatbot/README.md)
 
 ## Blog IAM Series
 - [IAM policy mishaps: Intro to IAM](https://unicrons.cloud/en/2024/02/20/iam-policy-mishaps-intro-to-iam/)
-- [IAM policy mishaps: Case 1 - S3](https://unicrons.cloud/en/2024/06/01/iam-policy-mishaps-case-1---s3/)
+- [IAM policy mishaps: S3](https://unicrons.cloud/en/2024/06/01/iam-policy-mishaps-case-1---s3/)
+- [IAM policy mishaps: SNS](https://unicrons.cloud/en/2025/02/21/iam-policy-mishaps-case-2---sns/)
 - More soon...
