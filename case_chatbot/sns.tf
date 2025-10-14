@@ -1,3 +1,3 @@
-resource "aws_sns_topic" "sh3llcon_monitoring" {
-  name = "sh3llcon-monitoring"
+resource "aws_sns_topic" "unicrons_monitoring" {
+  name = "unicrons-monitoring"
 }

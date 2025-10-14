@@ -1,5 +1,5 @@
 resource "aws_cloudwatch_metric_alarm" "lambda_error" {
-  alarm_name        = "sh3llcon-invocies-lambda-error"
+  alarm_name        = "unicrons-invocies-lambda-error"
   alarm_description = "AWS Lambda execution failure"
   metric_name       = "Errors"
   namespace         = "AWS/Lambda"
@@ -15,7 +15,7 @@ resource "aws_cloudwatch_metric_alarm" "lambda_error" {
     FunctionName = var.lambda_name
   }
 
-  alarm_actions   = [aws_sns_topic.sh3llcon_monitoring.arn]
-  ok_actions      = [aws_sns_topic.sh3llcon_monitoring.arn]
+  alarm_actions   = [aws_sns_topic.unicrons_monitoring.arn]
+  ok_actions      = [aws_sns_topic.unicrons_monitoring.arn]
   actions_enabled = true
 }
