@@ -6,7 +6,7 @@ Originally created for [Sh3llcon 2024 talk](https://sh3llcon.es/programa/). [[Sl
 
 Updated for [AWS UG VLC Meetup](https://www.meetup.com/aws-valencia/events/303501987) with a new case. [[Slides]](./AWSUGVLC_IAM_policy_mishaps_slides.pdf)
 
-Updated for [AWS Community Day CEE 2025](https://awscommunity.eu/). [[Slides]](#TODO)
+Updated for [AWS Community Day CEE 2025](https://awscommunity.eu/). [[Slides]](https://github.com/unicrons/iam-mishaps-demo/blob/main/slides/AWSCEE_IAM_policy_mishaps.pdf)
 
 
 # Cases
